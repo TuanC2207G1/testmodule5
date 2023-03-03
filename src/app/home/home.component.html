@@ -1,0 +1,43 @@
+<!--<div class="background" style="margin-bottom:0" style="height: 500px">-->
+<!--</div>-->
+
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+  <a class="navbar-brand" routerLink="">Home</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="collapsibleNavbar">
+    <ul class="navbar-nav">
+    </ul>
+  </div>
+</nav>
+<button type="button" class="btn btn-success" routerLink="/create">Create</button>
+<div class="container">
+  <table class="table">
+    <thead>
+    <tr>
+      <th>Id</th>
+      <th>Tên địa điểm</th>
+      <th>Giá</th>
+      <th>Hành Động</th>
+      <th></th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let p of tours">
+      <td>{{p.id}}</td>
+      <td>
+        <a [routerLink]="['/tour/',p.id]">{{p.title}}</a>
+      </td>
+      <td>{{p.price}}</td>
+      <td>
+        <button type="button" class="btn btn-warning" [routerLink]="['/edit/',p.id]">Edit</button>
+      </td>
+      <td>
+        <button type="button" class="btn btn-danger" [routerLink]="['/delete/',p.id]">Delete</button>
+      </td>
+    </tr>
+
+    </tbody>
+  </table>
+</div>

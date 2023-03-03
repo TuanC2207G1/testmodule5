@@ -1,0 +1,24 @@
+<form>
+  <div class="container">
+    <h1>Sửa tour</h1>
+    <form [formGroup]="formEdit" (submit)="editProduct()">
+      <div class="form-group">
+        <input type="text" class="form-control" formControlName="id" hidden>
+      </div>
+      <div class="form-group">
+        <label>Name:</label>
+        <input type="text" class="form-control" formControlName="title">
+      </div>
+      <div class="form-group">
+        <label>Image:</label>
+        <input type="text" class="form-control" formControlName="price">
+      </div>
+      <div class="form-group">
+        <label>Price:</label>
+        <input class="form-control" formControlName="description">
+      </div>
+      <button type="submit" class="btn btn-success">Sửa</button>
+      <button type="button" class="btn btn-dark" routerLink="">Hủy</button>
+    </form>
+  </div>
+</form>
